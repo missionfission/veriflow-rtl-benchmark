@@ -1,0 +1,1251 @@
+{
+  "schema_version": 1,
+  "kind": "imported-candidates",
+  "runs": [
+    {
+      "design": "fifo",
+      "kind": "imported-candidates",
+      "seed": 0,
+      "cycles": 316,
+      "rtl_sha256": {
+        "rtl/fifo.v": "473edf86ef938657fa85ae8b6fee3475cfdfbf0450e295c927f70e5040bb0d2a"
+      },
+      "spec_sha256": "f7182e5eaf5da15ee0e6fb5691d520a18f7187b87282d10045a6397096fbed9c",
+      "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+      "equivalence": "pass",
+      "lint": "pass",
+      "synthesis": "pass",
+      "overall_pass": true,
+      "retries": 0,
+      "tokens": 10481,
+      "generation_seconds": 151,
+      "evaluation_seconds": 0.1306,
+      "metadata": {
+        "run_id": "fifo-1",
+        "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+        "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+        "retries": 0,
+        "tokens": 10481,
+        "generation_seconds": 151,
+        "fresh_generation": true
+      },
+      "stages": {
+        "lint": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-Wall",
+            "-s",
+            "fifo",
+            "-t",
+            "null",
+            "rtl/fifo.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0049,
+          "status": "pass"
+        },
+        "compile": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-s",
+            "tb",
+            "-o",
+            "sim.out",
+            "tb.v",
+            "rtl/fifo.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0327,
+          "status": "pass"
+        },
+        "simulation": {
+          "command": [
+            "/usr/bin/vvp",
+            "sim.out"
+          ],
+          "returncode": 0,
+          "seconds": 0.0182,
+          "status": "pass"
+        },
+        "synthesis": {
+          "command": [
+            "/usr/bin/yosys",
+            "-Q",
+            "-T",
+            "-p",
+            "read_verilog -sv \"rtl/fifo.v\"; hierarchy -check -top fifo; synth -top fifo -noabc; check -assert; stat; write_json netlist.json"
+          ],
+          "returncode": 0,
+          "seconds": 0.0709,
+          "status": "pass"
+        }
+      },
+      "archive": "fifo-run-1.tar.gz",
+      "archive_sha256": "366779e272d85f43d07e73e9d705af1757ccb0b47e298e40769b8cd36062903b"
+    },
+    {
+      "design": "fifo",
+      "kind": "imported-candidates",
+      "seed": 1,
+      "cycles": 316,
+      "rtl_sha256": {
+        "rtl/fifo.v": "473edf86ef938657fa85ae8b6fee3475cfdfbf0450e295c927f70e5040bb0d2a"
+      },
+      "spec_sha256": "f7182e5eaf5da15ee0e6fb5691d520a18f7187b87282d10045a6397096fbed9c",
+      "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+      "equivalence": "pass",
+      "lint": "pass",
+      "synthesis": "pass",
+      "overall_pass": true,
+      "retries": 0,
+      "tokens": 15005,
+      "generation_seconds": 97,
+      "evaluation_seconds": 0.132,
+      "metadata": {
+        "run_id": "fifo-2",
+        "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+        "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+        "retries": 0,
+        "tokens": 15005,
+        "generation_seconds": 97,
+        "fresh_generation": true
+      },
+      "stages": {
+        "lint": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-Wall",
+            "-s",
+            "fifo",
+            "-t",
+            "null",
+            "rtl/fifo.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0055,
+          "status": "pass"
+        },
+        "compile": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-s",
+            "tb",
+            "-o",
+            "sim.out",
+            "tb.v",
+            "rtl/fifo.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.032,
+          "status": "pass"
+        },
+        "simulation": {
+          "command": [
+            "/usr/bin/vvp",
+            "sim.out"
+          ],
+          "returncode": 0,
+          "seconds": 0.0172,
+          "status": "pass"
+        },
+        "synthesis": {
+          "command": [
+            "/usr/bin/yosys",
+            "-Q",
+            "-T",
+            "-p",
+            "read_verilog -sv \"rtl/fifo.v\"; hierarchy -check -top fifo; synth -top fifo -noabc; check -assert; stat; write_json netlist.json"
+          ],
+          "returncode": 0,
+          "seconds": 0.0738,
+          "status": "pass"
+        }
+      },
+      "archive": "fifo-run-2.tar.gz",
+      "archive_sha256": "94bf8485a09ad2c68f89ab582bc2f393f66e5eddfbb42bd322bc7141d2e13e5d"
+    },
+    {
+      "design": "fifo",
+      "kind": "imported-candidates",
+      "seed": 2,
+      "cycles": 316,
+      "rtl_sha256": {
+        "rtl/fifo.v": "473edf86ef938657fa85ae8b6fee3475cfdfbf0450e295c927f70e5040bb0d2a"
+      },
+      "spec_sha256": "f7182e5eaf5da15ee0e6fb5691d520a18f7187b87282d10045a6397096fbed9c",
+      "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+      "equivalence": "pass",
+      "lint": "pass",
+      "synthesis": "pass",
+      "overall_pass": true,
+      "retries": 0,
+      "tokens": 25450,
+      "generation_seconds": 103,
+      "evaluation_seconds": 0.1922,
+      "metadata": {
+        "run_id": "fifo-3",
+        "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+        "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+        "retries": 0,
+        "tokens": 25450,
+        "generation_seconds": 103,
+        "fresh_generation": true
+      },
+      "stages": {
+        "lint": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-Wall",
+            "-s",
+            "fifo",
+            "-t",
+            "null",
+            "rtl/fifo.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0056,
+          "status": "pass"
+        },
+        "compile": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-s",
+            "tb",
+            "-o",
+            "sim.out",
+            "tb.v",
+            "rtl/fifo.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0533,
+          "status": "pass"
+        },
+        "simulation": {
+          "command": [
+            "/usr/bin/vvp",
+            "sim.out"
+          ],
+          "returncode": 0,
+          "seconds": 0.0179,
+          "status": "pass"
+        },
+        "synthesis": {
+          "command": [
+            "/usr/bin/yosys",
+            "-Q",
+            "-T",
+            "-p",
+            "read_verilog -sv \"rtl/fifo.v\"; hierarchy -check -top fifo; synth -top fifo -noabc; check -assert; stat; write_json netlist.json"
+          ],
+          "returncode": 0,
+          "seconds": 0.1115,
+          "status": "pass"
+        }
+      },
+      "archive": "fifo-run-3.tar.gz",
+      "archive_sha256": "ef798f2a5e26893eff9bd94a2154d147934aacd9f68f795fe730df0e6d862a31"
+    },
+    {
+      "design": "uart",
+      "kind": "imported-candidates",
+      "seed": 0,
+      "cycles": 470,
+      "rtl_sha256": {
+        "rtl/uart.v": "90fb67b8afd4a2fd0ae2203c883bb0d19b02f57d98c3f4bf22f4130576c9af13"
+      },
+      "spec_sha256": "8bfd7ec37f7201c081b2e61827878fe9f1616c7509280ffcb68f0dd1edf12c46",
+      "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+      "equivalence": "pass",
+      "lint": "pass",
+      "synthesis": "pass",
+      "overall_pass": true,
+      "retries": 0,
+      "tokens": 17240,
+      "generation_seconds": 105,
+      "evaluation_seconds": 0.124,
+      "metadata": {
+        "run_id": "uart-1",
+        "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+        "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+        "retries": 0,
+        "tokens": 17240,
+        "generation_seconds": 105,
+        "fresh_generation": true
+      },
+      "stages": {
+        "lint": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-Wall",
+            "-s",
+            "uart",
+            "-t",
+            "null",
+            "rtl/uart.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0056,
+          "status": "pass"
+        },
+        "compile": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-s",
+            "tb",
+            "-o",
+            "sim.out",
+            "tb.v",
+            "rtl/uart.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0298,
+          "status": "pass"
+        },
+        "simulation": {
+          "command": [
+            "/usr/bin/vvp",
+            "sim.out"
+          ],
+          "returncode": 0,
+          "seconds": 0.0151,
+          "status": "pass"
+        },
+        "synthesis": {
+          "command": [
+            "/usr/bin/yosys",
+            "-Q",
+            "-T",
+            "-p",
+            "read_verilog -sv \"rtl/uart.v\"; hierarchy -check -top uart; synth -top uart -noabc; check -assert; stat; write_json netlist.json"
+          ],
+          "returncode": 0,
+          "seconds": 0.0693,
+          "status": "pass"
+        }
+      },
+      "archive": "uart-run-1.tar.gz",
+      "archive_sha256": "7e7c1f5701bc94a03a4b536315b8bbe03582287730daedd702d4cd9abe777893"
+    },
+    {
+      "design": "uart",
+      "kind": "imported-candidates",
+      "seed": 1,
+      "cycles": 470,
+      "rtl_sha256": {
+        "rtl/uart.v": "e4e7317e45556caf5bfaa72fd02849520aee9af03f5f033e42f17010a3b939bf"
+      },
+      "spec_sha256": "8bfd7ec37f7201c081b2e61827878fe9f1616c7509280ffcb68f0dd1edf12c46",
+      "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+      "equivalence": "pass",
+      "lint": "pass",
+      "synthesis": "pass",
+      "overall_pass": true,
+      "retries": 0,
+      "tokens": 14481,
+      "generation_seconds": 145,
+      "evaluation_seconds": 0.1071,
+      "metadata": {
+        "run_id": "uart-2",
+        "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+        "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+        "retries": 0,
+        "tokens": 14481,
+        "generation_seconds": 145,
+        "fresh_generation": true
+      },
+      "stages": {
+        "lint": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-Wall",
+            "-s",
+            "uart",
+            "-t",
+            "null",
+            "rtl/uart.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0053,
+          "status": "pass"
+        },
+        "compile": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-s",
+            "tb",
+            "-o",
+            "sim.out",
+            "tb.v",
+            "rtl/uart.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0285,
+          "status": "pass"
+        },
+        "simulation": {
+          "command": [
+            "/usr/bin/vvp",
+            "sim.out"
+          ],
+          "returncode": 0,
+          "seconds": 0.0138,
+          "status": "pass"
+        },
+        "synthesis": {
+          "command": [
+            "/usr/bin/yosys",
+            "-Q",
+            "-T",
+            "-p",
+            "read_verilog -sv \"rtl/uart.v\"; hierarchy -check -top uart; synth -top uart -noabc; check -assert; stat; write_json netlist.json"
+          ],
+          "returncode": 0,
+          "seconds": 0.0561,
+          "status": "pass"
+        }
+      },
+      "archive": "uart-run-2.tar.gz",
+      "archive_sha256": "9a2fd24852dccc2fca9a809b0acaeff15ad8801c006e717909f96fb55a87b2bc"
+    },
+    {
+      "design": "uart",
+      "kind": "imported-candidates",
+      "seed": 2,
+      "cycles": 470,
+      "rtl_sha256": {
+        "rtl/uart.v": "0d87bfa5c5f879e386c9161b1cda804e0c41ae4e32073ec1778ada8187f8a62a"
+      },
+      "spec_sha256": "8bfd7ec37f7201c081b2e61827878fe9f1616c7509280ffcb68f0dd1edf12c46",
+      "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+      "equivalence": "pass",
+      "lint": "pass",
+      "synthesis": "pass",
+      "overall_pass": true,
+      "retries": 0,
+      "tokens": 12179,
+      "generation_seconds": 164,
+      "evaluation_seconds": 0.1298,
+      "metadata": {
+        "run_id": "uart-3",
+        "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+        "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+        "retries": 0,
+        "tokens": 12179,
+        "generation_seconds": 164,
+        "fresh_generation": true
+      },
+      "stages": {
+        "lint": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-Wall",
+            "-s",
+            "uart",
+            "-t",
+            "null",
+            "rtl/uart.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0067,
+          "status": "pass"
+        },
+        "compile": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-s",
+            "tb",
+            "-o",
+            "sim.out",
+            "tb.v",
+            "rtl/uart.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0409,
+          "status": "pass"
+        },
+        "simulation": {
+          "command": [
+            "/usr/bin/vvp",
+            "sim.out"
+          ],
+          "returncode": 0,
+          "seconds": 0.0149,
+          "status": "pass"
+        },
+        "synthesis": {
+          "command": [
+            "/usr/bin/yosys",
+            "-Q",
+            "-T",
+            "-p",
+            "read_verilog -sv \"rtl/uart.v\"; hierarchy -check -top uart; synth -top uart -noabc; check -assert; stat; write_json netlist.json"
+          ],
+          "returncode": 0,
+          "seconds": 0.0638,
+          "status": "pass"
+        }
+      },
+      "archive": "uart-run-3.tar.gz",
+      "archive_sha256": "62ab382c23742f7044806d3a5a949930085489ed4ea993851ccad609ce44ae08"
+    },
+    {
+      "design": "axi_lite",
+      "kind": "imported-candidates",
+      "seed": 0,
+      "cycles": 340,
+      "rtl_sha256": {
+        "rtl/axi_lite.v": "54e432950df1bd24c6e6b32efcfa01bfe965c9d49a5a4ae6b7a7b628a4209f70"
+      },
+      "spec_sha256": "1758fea512116fb546348b7d3bfb87d2287bd2c42719498078e519689c788ad2",
+      "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+      "equivalence": "pass",
+      "lint": "pass",
+      "synthesis": "pass",
+      "overall_pass": true,
+      "retries": 0,
+      "tokens": 25032,
+      "generation_seconds": 261,
+      "evaluation_seconds": 0.2499,
+      "metadata": {
+        "run_id": "axi_lite-1",
+        "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+        "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+        "retries": 0,
+        "tokens": 25032,
+        "generation_seconds": 261,
+        "fresh_generation": true
+      },
+      "stages": {
+        "lint": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-Wall",
+            "-s",
+            "axi_lite",
+            "-t",
+            "null",
+            "rtl/axi_lite.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.006,
+          "status": "pass"
+        },
+        "compile": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-s",
+            "tb",
+            "-o",
+            "sim.out",
+            "tb.v",
+            "rtl/axi_lite.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0661,
+          "status": "pass"
+        },
+        "simulation": {
+          "command": [
+            "/usr/bin/vvp",
+            "sim.out"
+          ],
+          "returncode": 0,
+          "seconds": 0.0307,
+          "status": "pass"
+        },
+        "synthesis": {
+          "command": [
+            "/usr/bin/yosys",
+            "-Q",
+            "-T",
+            "-p",
+            "read_verilog -sv \"rtl/axi_lite.v\"; hierarchy -check -top axi_lite; synth -top axi_lite -noabc; check -assert; stat; write_json netlist.json"
+          ],
+          "returncode": 0,
+          "seconds": 0.1411,
+          "status": "pass"
+        }
+      },
+      "archive": "axi_lite-run-1.tar.gz",
+      "archive_sha256": "c84aef01d5db0ebd5fffd4d38ba39ae51e3889d2f78f7e3f767058ce6f37172e"
+    },
+    {
+      "design": "axi_lite",
+      "kind": "imported-candidates",
+      "seed": 1,
+      "cycles": 340,
+      "rtl_sha256": {
+        "rtl/axi_lite.v": "17f4946b51afc31ff511c5b5857e278e93e5931673fdb8bf0b4cf32ab969918b"
+      },
+      "spec_sha256": "1758fea512116fb546348b7d3bfb87d2287bd2c42719498078e519689c788ad2",
+      "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+      "equivalence": "pass",
+      "lint": "pass",
+      "synthesis": "pass",
+      "overall_pass": true,
+      "retries": 0,
+      "tokens": 28063,
+      "generation_seconds": 152,
+      "evaluation_seconds": 0.2414,
+      "metadata": {
+        "run_id": "axi_lite-2",
+        "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+        "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+        "retries": 0,
+        "tokens": 28063,
+        "generation_seconds": 152,
+        "fresh_generation": true
+      },
+      "stages": {
+        "lint": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-Wall",
+            "-s",
+            "axi_lite",
+            "-t",
+            "null",
+            "rtl/axi_lite.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0057,
+          "status": "pass"
+        },
+        "compile": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-s",
+            "tb",
+            "-o",
+            "sim.out",
+            "tb.v",
+            "rtl/axi_lite.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0635,
+          "status": "pass"
+        },
+        "simulation": {
+          "command": [
+            "/usr/bin/vvp",
+            "sim.out"
+          ],
+          "returncode": 0,
+          "seconds": 0.0325,
+          "status": "pass"
+        },
+        "synthesis": {
+          "command": [
+            "/usr/bin/yosys",
+            "-Q",
+            "-T",
+            "-p",
+            "read_verilog -sv \"rtl/axi_lite.v\"; hierarchy -check -top axi_lite; synth -top axi_lite -noabc; check -assert; stat; write_json netlist.json"
+          ],
+          "returncode": 0,
+          "seconds": 0.1345,
+          "status": "pass"
+        }
+      },
+      "archive": "axi_lite-run-2.tar.gz",
+      "archive_sha256": "808c936cc5c7f6537d4d54b42dfb1738fe22c2418fe18b49f3ecc80ddde36ff2"
+    },
+    {
+      "design": "axi_lite",
+      "kind": "imported-candidates",
+      "seed": 2,
+      "cycles": 340,
+      "rtl_sha256": {
+        "rtl/axi_lite.v": "7d4ff81dc7aed64ec4fd9060f273344cf53954be3ec4213a62cd0b1526916429"
+      },
+      "spec_sha256": "1758fea512116fb546348b7d3bfb87d2287bd2c42719498078e519689c788ad2",
+      "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+      "equivalence": "pass",
+      "lint": "pass",
+      "synthesis": "pass",
+      "overall_pass": true,
+      "retries": 0,
+      "tokens": 24561,
+      "generation_seconds": 251,
+      "evaluation_seconds": 0.2395,
+      "metadata": {
+        "run_id": "axi_lite-3",
+        "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+        "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+        "retries": 0,
+        "tokens": 24561,
+        "generation_seconds": 251,
+        "fresh_generation": true
+      },
+      "stages": {
+        "lint": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-Wall",
+            "-s",
+            "axi_lite",
+            "-t",
+            "null",
+            "rtl/axi_lite.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0058,
+          "status": "pass"
+        },
+        "compile": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-s",
+            "tb",
+            "-o",
+            "sim.out",
+            "tb.v",
+            "rtl/axi_lite.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0648,
+          "status": "pass"
+        },
+        "simulation": {
+          "command": [
+            "/usr/bin/vvp",
+            "sim.out"
+          ],
+          "returncode": 0,
+          "seconds": 0.0324,
+          "status": "pass"
+        },
+        "synthesis": {
+          "command": [
+            "/usr/bin/yosys",
+            "-Q",
+            "-T",
+            "-p",
+            "read_verilog -sv \"rtl/axi_lite.v\"; hierarchy -check -top axi_lite; synth -top axi_lite -noabc; check -assert; stat; write_json netlist.json"
+          ],
+          "returncode": 0,
+          "seconds": 0.1301,
+          "status": "pass"
+        }
+      },
+      "archive": "axi_lite-run-3.tar.gz",
+      "archive_sha256": "96daf00c07a2d48caf6df4842734c388fa0580b1e8abaa0b78af6a3bf81fd582"
+    },
+    {
+      "design": "cordic",
+      "kind": "imported-candidates",
+      "seed": 0,
+      "cycles": 325,
+      "rtl_sha256": {
+        "rtl/cordic.v": "cf32457785f143fa8d5e792c9e4d0e8b2d5c4f9f07810e26ec33b73811623f28"
+      },
+      "spec_sha256": "1292736325d4492a51f9eba7e2a0e4a7a5d3ab835670855b8727fb6f824cb8c7",
+      "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+      "equivalence": "pass",
+      "lint": "pass",
+      "synthesis": "pass",
+      "overall_pass": true,
+      "retries": 0,
+      "tokens": 22477,
+      "generation_seconds": 222,
+      "evaluation_seconds": 0.3415,
+      "metadata": {
+        "run_id": "cordic-1",
+        "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+        "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+        "retries": 0,
+        "tokens": 22477,
+        "generation_seconds": 222,
+        "fresh_generation": true
+      },
+      "stages": {
+        "lint": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-Wall",
+            "-s",
+            "cordic",
+            "-t",
+            "null",
+            "rtl/cordic.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.006,
+          "status": "pass"
+        },
+        "compile": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-s",
+            "tb",
+            "-o",
+            "sim.out",
+            "tb.v",
+            "rtl/cordic.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0456,
+          "status": "pass"
+        },
+        "simulation": {
+          "command": [
+            "/usr/bin/vvp",
+            "sim.out"
+          ],
+          "returncode": 0,
+          "seconds": 0.0301,
+          "status": "pass"
+        },
+        "synthesis": {
+          "command": [
+            "/usr/bin/yosys",
+            "-Q",
+            "-T",
+            "-p",
+            "read_verilog -sv \"rtl/cordic.v\"; hierarchy -check -top cordic; synth -top cordic -noabc; check -assert; stat; write_json netlist.json"
+          ],
+          "returncode": 0,
+          "seconds": 0.2553,
+          "status": "pass"
+        }
+      },
+      "archive": "cordic-run-1.tar.gz",
+      "archive_sha256": "25c7331b54c6f57b23d62276c2b42777bf222c667ae22ab7b3a2806e53a2e419"
+    },
+    {
+      "design": "cordic",
+      "kind": "imported-candidates",
+      "seed": 1,
+      "cycles": 325,
+      "rtl_sha256": {
+        "rtl/cordic.v": "b50599a0d9ecdb3297e97005d56c58837d08cf8406105dccb42e60cef6eafe76"
+      },
+      "spec_sha256": "1292736325d4492a51f9eba7e2a0e4a7a5d3ab835670855b8727fb6f824cb8c7",
+      "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+      "equivalence": "pass",
+      "lint": "pass",
+      "synthesis": "pass",
+      "overall_pass": true,
+      "retries": 0,
+      "tokens": 20274,
+      "generation_seconds": 121,
+      "evaluation_seconds": 0.4283,
+      "metadata": {
+        "run_id": "cordic-2",
+        "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+        "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+        "retries": 0,
+        "tokens": 20274,
+        "generation_seconds": 121,
+        "fresh_generation": true
+      },
+      "stages": {
+        "lint": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-Wall",
+            "-s",
+            "cordic",
+            "-t",
+            "null",
+            "rtl/cordic.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0061,
+          "status": "pass"
+        },
+        "compile": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-s",
+            "tb",
+            "-o",
+            "sim.out",
+            "tb.v",
+            "rtl/cordic.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0361,
+          "status": "pass"
+        },
+        "simulation": {
+          "command": [
+            "/usr/bin/vvp",
+            "sim.out"
+          ],
+          "returncode": 0,
+          "seconds": 0.026,
+          "status": "pass"
+        },
+        "synthesis": {
+          "command": [
+            "/usr/bin/yosys",
+            "-Q",
+            "-T",
+            "-p",
+            "read_verilog -sv \"rtl/cordic.v\"; hierarchy -check -top cordic; synth -top cordic -noabc; check -assert; stat; write_json netlist.json"
+          ],
+          "returncode": 0,
+          "seconds": 0.3555,
+          "status": "pass"
+        }
+      },
+      "archive": "cordic-run-2.tar.gz",
+      "archive_sha256": "b5847a4a0dd6bdfd111f71a7dd72a93bce3dc5b663a284faeb3c6e72f5b6855b"
+    },
+    {
+      "design": "cordic",
+      "kind": "imported-candidates",
+      "seed": 2,
+      "cycles": 325,
+      "rtl_sha256": {
+        "rtl/cordic.v": "80ff44a15829c405a23771dad19a50288a6fdc97dac7160abd4f9aba66707719"
+      },
+      "spec_sha256": "1292736325d4492a51f9eba7e2a0e4a7a5d3ab835670855b8727fb6f824cb8c7",
+      "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+      "equivalence": "pass",
+      "lint": "pass",
+      "synthesis": "pass",
+      "overall_pass": true,
+      "retries": 0,
+      "tokens": 17082,
+      "generation_seconds": 114,
+      "evaluation_seconds": 0.3432,
+      "metadata": {
+        "run_id": "cordic-3",
+        "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+        "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+        "retries": 0,
+        "tokens": 17082,
+        "generation_seconds": 114,
+        "fresh_generation": true
+      },
+      "stages": {
+        "lint": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-Wall",
+            "-s",
+            "cordic",
+            "-t",
+            "null",
+            "rtl/cordic.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0055,
+          "status": "pass"
+        },
+        "compile": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-s",
+            "tb",
+            "-o",
+            "sim.out",
+            "tb.v",
+            "rtl/cordic.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0338,
+          "status": "pass"
+        },
+        "simulation": {
+          "command": [
+            "/usr/bin/vvp",
+            "sim.out"
+          ],
+          "returncode": 0,
+          "seconds": 0.021,
+          "status": "pass"
+        },
+        "synthesis": {
+          "command": [
+            "/usr/bin/yosys",
+            "-Q",
+            "-T",
+            "-p",
+            "read_verilog -sv \"rtl/cordic.v\"; hierarchy -check -top cordic; synth -top cordic -noabc; check -assert; stat; write_json netlist.json"
+          ],
+          "returncode": 0,
+          "seconds": 0.2781,
+          "status": "pass"
+        }
+      },
+      "archive": "cordic-run-3.tar.gz",
+      "archive_sha256": "650bffdc7eb518bf70d9a34549a901b29f587d4cc33a50aec00b9f9b4b491600"
+    },
+    {
+      "design": "cache",
+      "kind": "imported-candidates",
+      "seed": 0,
+      "cycles": 311,
+      "rtl_sha256": {
+        "rtl/cache.v": "180fb18c1d0e5ddb9576d76a7d3555546b876492faa2c6e7ffcc8d1d62964840"
+      },
+      "spec_sha256": "0c0a8fc87ff133821762bebdb02d648101835ba6a7398c972c538b70da37662f",
+      "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+      "equivalence": "pass",
+      "lint": "pass",
+      "synthesis": "pass",
+      "overall_pass": true,
+      "retries": 0,
+      "tokens": 22736,
+      "generation_seconds": 176,
+      "evaluation_seconds": 1.4843,
+      "metadata": {
+        "run_id": "cache-1",
+        "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+        "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+        "retries": 0,
+        "tokens": 22736,
+        "generation_seconds": 176,
+        "fresh_generation": true
+      },
+      "stages": {
+        "lint": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-Wall",
+            "-s",
+            "cache",
+            "-t",
+            "null",
+            "rtl/cache.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0065,
+          "status": "pass"
+        },
+        "compile": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-s",
+            "tb",
+            "-o",
+            "sim.out",
+            "tb.v",
+            "rtl/cache.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0286,
+          "status": "pass"
+        },
+        "simulation": {
+          "command": [
+            "/usr/bin/vvp",
+            "sim.out"
+          ],
+          "returncode": 0,
+          "seconds": 0.0154,
+          "status": "pass"
+        },
+        "synthesis": {
+          "command": [
+            "/usr/bin/yosys",
+            "-Q",
+            "-T",
+            "-p",
+            "read_verilog -sv \"rtl/cache.v\"; hierarchy -check -top cache; synth -top cache -noabc; check -assert; stat; write_json netlist.json"
+          ],
+          "returncode": 0,
+          "seconds": 1.4295,
+          "status": "pass"
+        }
+      },
+      "archive": "cache-run-1.tar.gz",
+      "archive_sha256": "cfd95fba6d0e681fffbf221905c48a01f59d9528e031e840dab081bee2edadbc"
+    },
+    {
+      "design": "cache",
+      "kind": "imported-candidates",
+      "seed": 1,
+      "cycles": 311,
+      "rtl_sha256": {
+        "rtl/cache.v": "28bc36f31df57fff410bb756ad4cdcb70f12962f88ed80532596d8366409a17b"
+      },
+      "spec_sha256": "0c0a8fc87ff133821762bebdb02d648101835ba6a7398c972c538b70da37662f",
+      "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+      "equivalence": "pass",
+      "lint": "pass",
+      "synthesis": "pass",
+      "overall_pass": true,
+      "retries": 0,
+      "tokens": 30082,
+      "generation_seconds": 104,
+      "evaluation_seconds": 1.5183,
+      "metadata": {
+        "run_id": "cache-2",
+        "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+        "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+        "retries": 0,
+        "tokens": 30082,
+        "generation_seconds": 104,
+        "fresh_generation": true
+      },
+      "stages": {
+        "lint": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-Wall",
+            "-s",
+            "cache",
+            "-t",
+            "null",
+            "rtl/cache.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0061,
+          "status": "pass"
+        },
+        "compile": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-s",
+            "tb",
+            "-o",
+            "sim.out",
+            "tb.v",
+            "rtl/cache.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0412,
+          "status": "pass"
+        },
+        "simulation": {
+          "command": [
+            "/usr/bin/vvp",
+            "sim.out"
+          ],
+          "returncode": 0,
+          "seconds": 0.0193,
+          "status": "pass"
+        },
+        "synthesis": {
+          "command": [
+            "/usr/bin/yosys",
+            "-Q",
+            "-T",
+            "-p",
+            "read_verilog -sv \"rtl/cache.v\"; hierarchy -check -top cache; synth -top cache -noabc; check -assert; stat; write_json netlist.json"
+          ],
+          "returncode": 0,
+          "seconds": 1.4459,
+          "status": "pass"
+        }
+      },
+      "archive": "cache-run-2.tar.gz",
+      "archive_sha256": "26e99f582cb6c87257fe9abcf267d3b5739f561e0285cc4ec7dabc4951f712fd"
+    },
+    {
+      "design": "cache",
+      "kind": "imported-candidates",
+      "seed": 2,
+      "cycles": 311,
+      "rtl_sha256": {
+        "rtl/cache.v": "d0b1bef862fc6d6ff017a7d9e6f3f7045b9d8eecf447b1fc0888bec263ffcf6e"
+      },
+      "spec_sha256": "0c0a8fc87ff133821762bebdb02d648101835ba6a7398c972c538b70da37662f",
+      "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+      "equivalence": "pass",
+      "lint": "pass",
+      "synthesis": "pass",
+      "overall_pass": true,
+      "retries": 0,
+      "tokens": 18798,
+      "generation_seconds": 126,
+      "evaluation_seconds": 1.5259,
+      "metadata": {
+        "run_id": "cache-3",
+        "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+        "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+        "retries": 0,
+        "tokens": 18798,
+        "generation_seconds": 126,
+        "fresh_generation": true
+      },
+      "stages": {
+        "lint": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-Wall",
+            "-s",
+            "cache",
+            "-t",
+            "null",
+            "rtl/cache.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0058,
+          "status": "pass"
+        },
+        "compile": {
+          "command": [
+            "/usr/bin/iverilog",
+            "-g2012",
+            "-s",
+            "tb",
+            "-o",
+            "sim.out",
+            "tb.v",
+            "rtl/cache.v"
+          ],
+          "returncode": 0,
+          "seconds": 0.0346,
+          "status": "pass"
+        },
+        "simulation": {
+          "command": [
+            "/usr/bin/vvp",
+            "sim.out"
+          ],
+          "returncode": 0,
+          "seconds": 0.0165,
+          "status": "pass"
+        },
+        "synthesis": {
+          "command": [
+            "/usr/bin/yosys",
+            "-Q",
+            "-T",
+            "-p",
+            "read_verilog -sv \"rtl/cache.v\"; hierarchy -check -top cache; synth -top cache -noabc; check -assert; stat; write_json netlist.json"
+          ],
+          "returncode": 0,
+          "seconds": 1.4642,
+          "status": "pass"
+        }
+      },
+      "archive": "cache-run-3.tar.gz",
+      "archive_sha256": "f5c5948800ca0d0c6a0b56a0a3b9d5fce68be485b03b7a38a3005afd3135f175"
+    }
+  ]
+}

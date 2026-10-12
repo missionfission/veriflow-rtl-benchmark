@@ -1,0 +1,81 @@
+{
+  "design": "uart",
+  "kind": "imported-candidates",
+  "seed": 2,
+  "cycles": 470,
+  "rtl_sha256": {
+    "rtl/uart.v": "0d87bfa5c5f879e386c9161b1cda804e0c41ae4e32073ec1778ada8187f8a62a"
+  },
+  "spec_sha256": "8bfd7ec37f7201c081b2e61827878fe9f1616c7509280ffcb68f0dd1edf12c46",
+  "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+  "equivalence": "pass",
+  "lint": "pass",
+  "synthesis": "pass",
+  "overall_pass": true,
+  "retries": 0,
+  "tokens": 12179,
+  "generation_seconds": 164,
+  "evaluation_seconds": 0.1298,
+  "metadata": {
+    "run_id": "uart-3",
+    "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+    "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+    "retries": 0,
+    "tokens": 12179,
+    "generation_seconds": 164,
+    "fresh_generation": true
+  },
+  "stages": {
+    "lint": {
+      "command": [
+        "/usr/bin/iverilog",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "uart",
+        "-t",
+        "null",
+        "rtl/uart.v"
+      ],
+      "returncode": 0,
+      "seconds": 0.0067,
+      "status": "pass"
+    },
+    "compile": {
+      "command": [
+        "/usr/bin/iverilog",
+        "-g2012",
+        "-s",
+        "tb",
+        "-o",
+        "sim.out",
+        "tb.v",
+        "rtl/uart.v"
+      ],
+      "returncode": 0,
+      "seconds": 0.0409,
+      "status": "pass"
+    },
+    "simulation": {
+      "command": [
+        "/usr/bin/vvp",
+        "sim.out"
+      ],
+      "returncode": 0,
+      "seconds": 0.0149,
+      "status": "pass"
+    },
+    "synthesis": {
+      "command": [
+        "/usr/bin/yosys",
+        "-Q",
+        "-T",
+        "-p",
+        "read_verilog -sv \"rtl/uart.v\"; hierarchy -check -top uart; synth -top uart -noabc; check -assert; stat; write_json netlist.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.0638,
+      "status": "pass"
+    }
+  }
+}

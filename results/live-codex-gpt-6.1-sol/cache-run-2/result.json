@@ -1,0 +1,81 @@
+{
+  "design": "cache",
+  "kind": "imported-candidates",
+  "seed": 1,
+  "cycles": 311,
+  "rtl_sha256": {
+    "rtl/cache.v": "28bc36f31df57fff410bb756ad4cdcb70f12962f88ed80532596d8366409a17b"
+  },
+  "spec_sha256": "0c0a8fc87ff133821762bebdb02d648101835ba6a7398c972c538b70da37662f",
+  "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+  "equivalence": "pass",
+  "lint": "pass",
+  "synthesis": "pass",
+  "overall_pass": true,
+  "retries": 0,
+  "tokens": 30082,
+  "generation_seconds": 104,
+  "evaluation_seconds": 1.5183,
+  "metadata": {
+    "run_id": "cache-2",
+    "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+    "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+    "retries": 0,
+    "tokens": 30082,
+    "generation_seconds": 104,
+    "fresh_generation": true
+  },
+  "stages": {
+    "lint": {
+      "command": [
+        "/usr/bin/iverilog",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "cache",
+        "-t",
+        "null",
+        "rtl/cache.v"
+      ],
+      "returncode": 0,
+      "seconds": 0.0061,
+      "status": "pass"
+    },
+    "compile": {
+      "command": [
+        "/usr/bin/iverilog",
+        "-g2012",
+        "-s",
+        "tb",
+        "-o",
+        "sim.out",
+        "tb.v",
+        "rtl/cache.v"
+      ],
+      "returncode": 0,
+      "seconds": 0.0412,
+      "status": "pass"
+    },
+    "simulation": {
+      "command": [
+        "/usr/bin/vvp",
+        "sim.out"
+      ],
+      "returncode": 0,
+      "seconds": 0.0193,
+      "status": "pass"
+    },
+    "synthesis": {
+      "command": [
+        "/usr/bin/yosys",
+        "-Q",
+        "-T",
+        "-p",
+        "read_verilog -sv \"rtl/cache.v\"; hierarchy -check -top cache; synth -top cache -noabc; check -assert; stat; write_json netlist.json"
+      ],
+      "returncode": 0,
+      "seconds": 1.4459,
+      "status": "pass"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "run_id": "cache-3",
+  "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+  "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+  "retries": 0,
+  "tokens": 18798,
+  "generation_seconds": 126,
+  "fresh_generation": true
+}

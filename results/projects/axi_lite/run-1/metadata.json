@@ -1,0 +1,9 @@
+{
+  "run_id": "axi_lite-1",
+  "fresh_generation": true,
+  "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+  "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+  "retries": 0,
+  "tokens": 25032,
+  "generation_seconds": 261
+}

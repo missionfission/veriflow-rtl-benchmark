@@ -1,0 +1,81 @@
+{
+  "design": "cordic",
+  "kind": "imported-candidates",
+  "seed": 1,
+  "cycles": 325,
+  "rtl_sha256": {
+    "rtl/cordic.v": "b50599a0d9ecdb3297e97005d56c58837d08cf8406105dccb42e60cef6eafe76"
+  },
+  "spec_sha256": "1292736325d4492a51f9eba7e2a0e4a7a5d3ab835670855b8727fb6f824cb8c7",
+  "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+  "equivalence": "pass",
+  "lint": "pass",
+  "synthesis": "pass",
+  "overall_pass": true,
+  "retries": 0,
+  "tokens": 20274,
+  "generation_seconds": 121,
+  "evaluation_seconds": 0.4283,
+  "metadata": {
+    "run_id": "cordic-2",
+    "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+    "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+    "retries": 0,
+    "tokens": 20274,
+    "generation_seconds": 121,
+    "fresh_generation": true
+  },
+  "stages": {
+    "lint": {
+      "command": [
+        "/usr/bin/iverilog",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "cordic",
+        "-t",
+        "null",
+        "rtl/cordic.v"
+      ],
+      "returncode": 0,
+      "seconds": 0.0061,
+      "status": "pass"
+    },
+    "compile": {
+      "command": [
+        "/usr/bin/iverilog",
+        "-g2012",
+        "-s",
+        "tb",
+        "-o",
+        "sim.out",
+        "tb.v",
+        "rtl/cordic.v"
+      ],
+      "returncode": 0,
+      "seconds": 0.0361,
+      "status": "pass"
+    },
+    "simulation": {
+      "command": [
+        "/usr/bin/vvp",
+        "sim.out"
+      ],
+      "returncode": 0,
+      "seconds": 0.026,
+      "status": "pass"
+    },
+    "synthesis": {
+      "command": [
+        "/usr/bin/yosys",
+        "-Q",
+        "-T",
+        "-p",
+        "read_verilog -sv \"rtl/cordic.v\"; hierarchy -check -top cordic; synth -top cordic -noabc; check -assert; stat; write_json netlist.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.3555,
+      "status": "pass"
+    }
+  }
+}

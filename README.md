@@ -39,8 +39,10 @@ Each run's outputs are archived as a `.tar.gz` and summarised in `results.csv`, 
 
 - **Harness only.** The checker, specs, reference models and hand-written reference fixtures are done,
   and the unit tests pass (including mutation tests that confirm broken designs are caught).
-- **No AI generation results yet.** Live generation runs are coming next, using the Codex CLI as the
-  generator. Results will be added here when they exist.
+- **First live results (2026-10-12):** Codex CLI (gpt-6.1-sol, medium reasoning) using VeriFlow-CC's four-stage method
+  passed **15/15** runs (5 designs x 3 runs) on golden-model equivalence, lint and synthesis, with 0 fix retries.
+  See [`results/live-codex-gpt-6.1-sol/REPORT.md`](results/live-codex-gpt-6.1-sol/REPORT.md) and
+  [`FINDINGS.md`](results/live-codex-gpt-6.1-sol/FINDINGS.md) for limits. VeriFlow-CC itself (Claude Code) has not been run yet.
 
 ## How to run
 

@@ -1,0 +1,16 @@
+design,seed,equivalence,lint,synthesis,overall_pass,retries,tokens,generation_seconds,evaluation_seconds,archive
+fifo,0,pass,pass,pass,True,0,10481,151,0.1306,fifo-run-1.tar.gz
+fifo,1,pass,pass,pass,True,0,15005,97,0.132,fifo-run-2.tar.gz
+fifo,2,pass,pass,pass,True,0,25450,103,0.1922,fifo-run-3.tar.gz
+uart,0,pass,pass,pass,True,0,17240,105,0.124,uart-run-1.tar.gz
+uart,1,pass,pass,pass,True,0,14481,145,0.1071,uart-run-2.tar.gz
+uart,2,pass,pass,pass,True,0,12179,164,0.1298,uart-run-3.tar.gz
+axi_lite,0,pass,pass,pass,True,0,25032,261,0.2499,axi_lite-run-1.tar.gz
+axi_lite,1,pass,pass,pass,True,0,28063,152,0.2414,axi_lite-run-2.tar.gz
+axi_lite,2,pass,pass,pass,True,0,24561,251,0.2395,axi_lite-run-3.tar.gz
+cordic,0,pass,pass,pass,True,0,22477,222,0.3415,cordic-run-1.tar.gz
+cordic,1,pass,pass,pass,True,0,20274,121,0.4283,cordic-run-2.tar.gz
+cordic,2,pass,pass,pass,True,0,17082,114,0.3432,cordic-run-3.tar.gz
+cache,0,pass,pass,pass,True,0,22736,176,1.4843,cache-run-1.tar.gz
+cache,1,pass,pass,pass,True,0,30082,104,1.5183,cache-run-2.tar.gz
+cache,2,pass,pass,pass,True,0,18798,126,1.5259,cache-run-3.tar.gz

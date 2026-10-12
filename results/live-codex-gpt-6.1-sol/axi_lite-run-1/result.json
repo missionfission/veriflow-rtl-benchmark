@@ -1,0 +1,81 @@
+{
+  "design": "axi_lite",
+  "kind": "imported-candidates",
+  "seed": 0,
+  "cycles": 340,
+  "rtl_sha256": {
+    "rtl/axi_lite.v": "54e432950df1bd24c6e6b32efcfa01bfe965c9d49a5a4ae6b7a7b628a4209f70"
+  },
+  "spec_sha256": "1758fea512116fb546348b7d3bfb87d2287bd2c42719498078e519689c788ad2",
+  "oracle_sha256": "bf99c7256820c3b7092ffa257510e15cd875a226fc1aeafe904d25b23ddd357d",
+  "equivalence": "pass",
+  "lint": "pass",
+  "synthesis": "pass",
+  "overall_pass": true,
+  "retries": 0,
+  "tokens": 25032,
+  "generation_seconds": 261,
+  "evaluation_seconds": 0.2499,
+  "metadata": {
+    "run_id": "axi_lite-1",
+    "model": "gpt-6.1-sol (Codex CLI, medium reasoning) using VeriFlow-CC four-stage method",
+    "upstream_revision": "77eca651d0e6ec93ed5309060980c54e76af7432",
+    "retries": 0,
+    "tokens": 25032,
+    "generation_seconds": 261,
+    "fresh_generation": true
+  },
+  "stages": {
+    "lint": {
+      "command": [
+        "/usr/bin/iverilog",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "axi_lite",
+        "-t",
+        "null",
+        "rtl/axi_lite.v"
+      ],
+      "returncode": 0,
+      "seconds": 0.006,
+      "status": "pass"
+    },
+    "compile": {
+      "command": [
+        "/usr/bin/iverilog",
+        "-g2012",
+        "-s",
+        "tb",
+        "-o",
+        "sim.out",
+        "tb.v",
+        "rtl/axi_lite.v"
+      ],
+      "returncode": 0,
+      "seconds": 0.0661,
+      "status": "pass"
+    },
+    "simulation": {
+      "command": [
+        "/usr/bin/vvp",
+        "sim.out"
+      ],
+      "returncode": 0,
+      "seconds": 0.0307,
+      "status": "pass"
+    },
+    "synthesis": {
+      "command": [
+        "/usr/bin/yosys",
+        "-Q",
+        "-T",
+        "-p",
+        "read_verilog -sv \"rtl/axi_lite.v\"; hierarchy -check -top axi_lite; synth -top axi_lite -noabc; check -assert; stat; write_json netlist.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.1411,
+      "status": "pass"
+    }
+  }
+}
